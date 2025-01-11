@@ -1,0 +1,14 @@
+{
+    "name": "vendor/test-work",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "Controllers\\": "controllers/",
+            "Config\\": "config/"
+        }
+    },
+    "require": {
+        "ext-pdo": "*",
+        "php": ">=8.0"
+    }
+}
