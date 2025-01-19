@@ -2,13 +2,14 @@
     "name": "vendor/test-work",
     "autoload": {
         "psr-4": {
-            "Core\\": "core/",
-            "Controllers\\": "controllers/",
+            "Core\\": "app/core/",
+            "Controllers\\": "app/controllers/",
             "Config\\": "config/"
         }
     },
     "require": {
         "ext-pdo": "*",
-        "php": ">=8.0"
+        "php": ">=8.1",
+        "vlucas/phpdotenv": "^5.6"
     }
 }

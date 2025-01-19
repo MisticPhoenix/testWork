@@ -9,13 +9,17 @@ class Database
 {
     private $pdo;
     private static $instance = null;
-    private $host = '127.0.0.1';
-    private $dbname = 'products';
-    private $user = 'root';
-    private $password = '';
+    private $host;
+    private $dbname;
+    private $user;
+    private $password;
 
     private function __construct()
     {
+        $this->host = $_ENV['DB_HOST'];
+        $this->dbname = $_ENV['DB_NAME'];
+        $this->user = $_ENV['DB_USER'];
+        $this->password = $_ENV['DB_PASSWORD'];
         try {
             $this->pdo = new PDO(
                 "mysql:host=" . $this->host . ";dbname=" . $this->dbname, $this->user, $this->password

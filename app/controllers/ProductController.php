@@ -4,10 +4,12 @@ namespace Controllers;
 
 use Config\Database;
 use Core\Controller;
+use PDO;
 
 class ProductController extends Controller
 {
-    private \PDO $pdo;
+    private PDO $pdo;
+
     public function __construct()
     {
         $this->pdo = Database::getInstance()->getPDO();
